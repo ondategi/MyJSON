@@ -1,0 +1,1 @@
+[{"nombre":"Unión del Pueblo Navarro","siglas":"UPN"},{"nombre":"Partido Socialista de Navarra","siglas":"PSN"},{"nombre":"Izquierda-Ezkerra","siglas":"IU-Ez"},{"nombre":"Partido Popular de Navarra","siglas":"PPN"},{"nombre":"Bildu","siglas":"Bildu"},{"nombre":"Ahora es OTRO","siglas":"UPN"},{"nombre":"Ahora es OTRO","siglas":"UPN"}]
