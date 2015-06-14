@@ -1,0 +1,565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+
+<head>
+    <title>TITLE_PAGINA</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="shortcut icon" href="favicon01.ico" />
+	<link href="../01css/csspgno.css" rel="stylesheet" type="text/css" />
+	<link href="../01css/AU01color.css" rel="stylesheet" type="text/css" />
+
+	<!--[if IE 9]>
+        <link href="../01css/layout_IE9.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if lt IE 9]>
+        <link href="../01css/layout_lt_IE9.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+	<!--[if lte IE 8]>
+        <script type="text/javascript" src="../01js/excanvas.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+    //<![CDATA[
+		if (navigator.userAgent.indexOf("MSIE 7") == -1 && navigator.userAgent.indexOf("MSIE 8") == -1) {
+                var style = document.createElement("style");
+                document.head.appendChild(style);
+                sheet = style.sheet;
+                if (navigator.appCodeName == "Mozilla" && ((navigator.userAgent.indexOf ("Firefox") != -1) || (navigator.userAgent.indexOf("MSIE") != -1) || (navigator.userAgent.indexOf("Opera") != -1))){
+			try{
+				sheet.insertRule("@media only screen and (min-width:880px) {#menucab li#b7 div.ext:after,#menucab li#b7 div.ext.ipadconcontent:after {content:none;}}",0);
+				sheet.insertRule("@media only screen and (min-width:880px) {#menucab li#b7 div.ext a,#menucab li#b7 div.ext.ipadconcontent a{display:inline;}}",0);
+				sheet.insertRule("@media only screen and (min-width:880px) {#menucab li#b7 .cajaiframe{display:none; opacity:0;}}",0);
+                sheet.insertRule("@media only screen and (max-width:879px) {#menucab li#b7 div.ext a.linkcand {display:none;}}",0);
+			}catch(e){
+				alert(e);
+			}
+                } else{
+			try{
+				sheet.addRule("@media only screen and (min-width:880px) {#menucab li#b7 div.ext:after,#menucab li#b7 div.ext.ipadconcontent:after","content:none;}");
+				sheet.addRule("@media only screen and (min-width:880px) {#menucab li#b7 div.ext a,#menucab li#b7 div.ext.ipadconcontent a","display:inline;}");
+				sheet.addRule("@media only screen and (min-width:880px) {#menucab li#b7 .cajaiframe","display:none; opacity:0;}");
+                sheet.addRule("@media only screen and (max-width:879px) {#menucab li#b7 div.ext a.linkcand","display:none;}");
+			}catch(e){
+				alert(e);
+			}
+                }
+		}
+    //]]>
+	</script>
+
+	<script type="text/javascript" src="../01js/matchMedia.js"></script>
+	<script type="text/javascript" src="../01js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../01js/basico.js"></script>
+	<script type="text/javascript" src="../01js/modernizr.js"></script>
+	<script type="text/javascript" src="../01js/detectizr.js"></script>
+	<script type="text/javascript" src="../01js/jquery.flot.js"></script>
+	<script type="text/javascript" src="../01js/programadorflot.js"></script>
+	<script type="text/javascript" src="../01js/jquery.flot.arco.js"></script>
+	<script type="text/javascript" src="../01js/AU01color.js"></script>
+
+</head>
+
+    <body class="c01 AU CM">
+
+        <!-- BANNER FIJO -->
+        <div id="bannerfijo" class="L1">
+
+            <!-- BANDA -->
+            <div id="banda" class="L1">
+                <div class="logo_elec"><img src="../01imgs/logo-elecN_L1.png" alt="class_logo_elec_ALT" /></div>
+                <div class="logo_com"><img src="../01imgs/logo-organismoN_L1.png" alt="class_logo_com_ALT" />
+                </div>
+            </div>
+            <!-- FIN BANDA -->
+
+            <!-- BOTONERA -->
+            <div id="botonera">
+                <div id="menucab" class="navmenu  grande">
+                    <div id="desplmenu">
+                        <a tabindex="1" href="./IAU01L_L1.htm" onclick="return togglemenu()"><img src="../01imgs/menumovil.png" alt="Menú navegación" /></a>
+                    </div>
+                    <ul id="desplmenuul">
+                        <li id="b1">
+                            <div title="Inicio" class="ext"><a tabindex="2" href="http://www.tudela.es">Inicio</a></div>
+                        </li>
+                        <li id="b3" class='act'>
+                            <div class="ext act" title="MUNICIPIO_class_ext_act_TITLE">
+                                <a tabindex="5" class='act' href="./DAU01999CM_L1.htm">MUNICIPIO_class_act_DENOMINACION</a>
+                            </div>
+                        </li>
+                        <li id="b8" class='claseActCircunscripciones ' aria-haspopup="true">
+                            <div class="ext claseActCircunscripciones " title="DISTRITOS_class_ext_claseActCircunscripciones_TITLE">
+                                <a tabindex="10" class="claseActCircunscripciones " href="./DAU01000CI_L1.htm" onclick="return iframeporhover($(this).attr('href'))">DISTRITOS_class_claseActCircunscripciones_DENOMINACION</a>
+                            </div>
+                            <div class="navsub" id="listaCircunscripciones">
+                                <div class="resum"><a tabindex="11" href="./DAU01000CI_L1.htm">RESUMEN_class_resum_DENOMINACION</a></div>
+                                <ul class="submenu">
+                                    <li class = "circ">
+                                        <div class="dlk ext" title="SECCIONES_MESAS_DISTRITO1_class_dlk_ext_TITLE">
+                                            <a tabindex="12" class="lk" href="./DAU01049CI_L1.htm">SECCIONES_MESAS_DISTRITO1_class_lk_DENOMINACION</a>
+                                        </div>
+                                        <ul class="subtabla">
+                                            <li class = "mun">
+                                                <div class ="dlk ext">
+                                                    <div title="SECCIONES_MESAS_DISTRITO1_class_dlk_ext_TITLE" class="dlk in">
+                                                        <a tabindex="13" class="lk" href="./IAU049MC_L1.htm"  onclick="return iframeporhover($(this).attr('href'))" >SECCIONES_MESAS_DISTRITO1_class_lk_DENOMINACION</a>
+                                                    </div>
+                                                </div>
+                                                <div class="cajabusq" ></div>
+                                                <noscript>
+                                                    <div class="cajaiframe">
+                                                        <iframe class="frmenu posibleScrollbar" frameborder="0" title="SECCIONES_MESAS_DISTRITO1_frmenu_posibleScrollbar_TITLE" name="SECCIONES_MESAS_DISTRITO1_frmenu_posibleScrollbar_NAME" src="./IAU049MC_L1.htm">
+                                                            <a href="./IAU049MC_L1.htm">SECCIONES_MESAS_DISTRITO1_frmenu_posibleScrollbar_DENOMINACION</a>
+                                                        </iframe>
+                                                    </div>
+                                                </noscript>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class = "circ">
+                                        <div class="dlk ext" title="SECCIONES_MESAS_DISTRITO2_class_dlk_ext_TITLE">
+                                            <a tabindex="14" class="lk" href="./DAU01119CI_L1.htm">SECCIONES_MESAS_DISTRITO2_class_lk_DENOMINACION</a>
+                                        </div>
+                                        <ul class="subtabla">
+                                            <li class = "mun">
+                                                <div class ="dlk ext">
+                                                    <div title="SECCIONES_MESAS_DISTRITO2_class_dlk_ext_TITLE" class="dlk in">
+                                                        <a tabindex="15" class="lk" href="./IAU119MC_L1.htm"  onclick="return iframeporhover($(this).attr('href'))" >SECCIONES_MESAS_DISTRITO2_class_lk_DENOMINACION</a>
+                                                    </div>
+                                                </div>
+                                                <div class="cajabusq" ></div>
+                                                <noscript>
+                                                    <div class="cajaiframe">
+                                                        <iframe class="frmenu posibleScrollbar" frameborder="0" title="SECCIONES_MESAS_DISTRITO2_frmenu_posibleScrollbar_TITLE" name="SECCIONES_MESAS_DISTRITO2_frmenu_posibleScrollbar_NAME" src="./IAU119MC_L1.htm">
+                                                            <a href="./IAU119MC_L1.htm">SECCIONES_MESAS_DISTRITO2_frmenu_posibleScrollbar_NAME</a>
+                                                        </iframe>
+                                                    </div>
+                                                </noscript>
+                                            </li>
+                                        </ul>
+                                    </li>
+				    <li class = "circ">
+                                        <div class="dlk ext" title="SECCIONES_MESAS_DISTRITO3_class_dlk_ext_TITLE">
+                                            <a tabindex="12" class="lk" href="./DAU01049CI_L1.htm">SECCIONES_MESAS_DISTRITO3_class_lk_DENOMINACION</a>
+                                        </div>
+                                        <ul class="subtabla">
+                                            <li class = "mun">
+                                                <div class ="dlk ext">
+                                                    <div title="SECCIONES_MESAS_DISTRITO3_class_dlk_ext_TITLE" class="dlk in">
+                                                        <a tabindex="13" class="lk" href="./IAU049MC_L1.htm"  onclick="return iframeporhover($(this).attr('href'))" >SECCIONES_MESAS_DISTRITO3_class_lk_DENOMINACION</a>
+                                                    </div>
+                                                </div>
+                                                <div class="cajabusq" ></div>
+                                                <noscript>
+                                                    <div class="cajaiframe">
+                                                        <iframe class="frmenu posibleScrollbar" frameborder="0" title="SECCIONES_MESAS_DISTRITO3_frmenu_posibleScrollbar_TITLE" name="SECCIONES_MESAS_DISTRITO3_frmenu_posibleScrollbar_NAME" src="./IAU049MC_L1.htm">
+                                                            <a href="./IAU049MC_L1.htm">SECCIONES_MESAS_DISTRITO3_frmenu_posibleScrollbar_DENOMINACION</a>
+                                                        </iframe>
+                                                    </div>
+                                                </noscript>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class = "circ">
+                                        <div class="dlk ext" title="SECCIONES_MESAS_DISTRITO4_class_dlk_ext_TITLE">
+                                            <a tabindex="14" class="lk" href="./DAU01119CI_L1.htm">SECCIONES_MESAS_DISTRITO4_class_lk_DENOMINACION</a>
+                                        </div>
+                                        <ul class="subtabla">
+                                            <li class = "mun">
+                                                <div class ="dlk ext">
+                                                    <div title="SECCIONES_MESAS_DISTRITO4_class_dlk_ext_TITLE" class="dlk in">
+                                                        <a tabindex="15" class="lk" href="./IAU119MC_L1.htm"  onclick="return iframeporhover($(this).attr('href'))" >SECCIONES_MESAS_DISTRITO4_class_lk_DENOMINACION</a>
+                                                    </div>
+                                                </div>
+                                                <div class="cajabusq" ></div>
+                                                <noscript>
+                                                    <div class="cajaiframe">
+                                                        <iframe class="frmenu posibleScrollbar" frameborder="0" title="SECCIONES_MESAS_DISTRITO4_frmenu_posibleScrollbar_TITLE" name="SECCIONES_MESAS_DISTRITO4_frmenu_posibleScrollbar_NAME" src="./IAU119MC_L1.htm">
+                                                            <a href="./IAU119MC_L1.htm">SECCIONES_MESAS_DISTRITO4_frmenu_posibleScrollbar_DENOMINACION</a>
+                                                        </iframe>
+                                                    </div>
+                                                </noscript>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li id="b7" class="claseActCandidaturas" aria-haspopup="true">
+                            <div class="ext dlk claseActCandidaturas" title="CANDIDATURAS_ext_dlk_claseActCandidaturasTITLE">
+                                <a tabindex="30" class="lk claseActCandidaturas" href="./IAU01P_L1.htm" onclick="return iframeporhover($(this).attr('href'))">CANDIDATURAS_lk_claseActCandidaturasHOVER</a>
+                                <a tabindex="31" class="linkcand claseActCandidaturas" href="./DAU01999XX_L1.htm">CANDIDATURAS_linkcand_claseActCandidaturasDENOMINACION</a>
+                            </div>
+                            <div class="navsub">
+                                <div class="cajabusq"></div>
+                                <noscript>
+                                    <div class="cajaiframe">
+                                        <iframe class="frmenu posibleScrollbar" frameborder="0" title="CANDIDATURAS_frmenu_posibleScrollbar_TITLE" name="CANDIDATURAS_frmenu_posibleScrollbar_NAME" src="./IAU01P_L1.htm">
+                                            <a href="./IAU01P_L1.htm">CANDIDATURAS_frmenu_posibleScrollbar_DENOMINACIO</a>
+                                        </iframe>
+                                    </div>
+                                </noscript>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="iconlinks">
+                    <ul>
+                        <li id="prtico" >
+                            <a href="javascript:window.print();" class="ico">
+                                <img src="../01imgs/print.png" alt="Imprimir" title="Imprimir" />
+                            </a>
+                        </li>
+                        <li id="rloico" >
+                            <a href="javascript:window.location.reload(true);" class="ico">
+                                <img src="../01imgs/reload.png" alt="Recargar" title="Recargar" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- FIN BOTONERA -->
+
+        </div>
+        <!-- FIN BANNER FIJO -->
+
+        <!-- CONTENIDO -->
+        <div id="contenido">
+
+            <!-- ICONLINKS -->
+            <div id="iconlinkscompl">
+                <ul>
+                    <li id="prt" >
+                        <a href="javascript:window.print();">
+                            <span class="icon"><img src="../01imgs/print.png" alt="Imprimir" title="Imprimir" /></span>
+                        </a>
+                    </li>
+                    <li id="rlo" >
+                        <a href="javascript:window.location.reload(true);">
+                            <span class="icon"><img src="../01imgs/reload.png" alt="Recargar" title="Recargar" /></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIN ICONLINKS -->
+
+           <!-- CAJA TÍTULO -->
+            <div id="cajatitulo">
+                <div id="titulo">Tudela</div>
+                <div id="horafecha"><span id="compr">Datos de las <span class="hora">HORAESCRU</span> del 24/05</span><span id="ext">Datos de las <span class="hora">HORAESCRU</span> del 24 de mayo de 2015</span></div>
+            </div>
+            <!-- FIN CAJA TÍTULO -->
+
+            <!-- XESCRUTADO -->
+            <div id="xescrutado">Escrutado <span>PORCEESCRU</span></div>
+            <!-- FIN XESCRUTADO -->
+
+            <!-- DATOS DETALLADOS -->
+            <div id="datosdetallados">
+
+                <!-- SECCIÓN 3 -->
+                <div id="seccion3">
+
+                    <!-- CAJADATOSUNO -->
+                    <div id="cajadatosuno">
+                        <table id="TVGEN" summary="Tabla con los datos de porcentaje de censo, votantes, abstención, votos en blanco y nulos">
+                            <colgroup>
+                                <col width="35%" />
+                                <col width="25%" />
+                                <col width="20%" />
+                                <col width="20%" />
+                            </colgroup>
+                            <thead>
+                                <tr class="th1">
+                                    <td></td>
+                                    <th colspan="2" class="th15" scope="col" abbr="2015">2015</th>
+                                    <th class="th11 s11 separa" scope="col" abbr="2012">2011</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Total votantes</th>
+                                    <td class="s15 totvot">TOTALVOTANTES15</td>
+                                    <td class="s15">PORCENPARTICIPACION15</td>
+                                    <td class="s11 separa">PORCENPARTICIPACION11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Abstención</th>
+                                    <td class="s15">TOTALABSTENCION15</td>
+                                    <td class="s15">PORCENABSTENCION15</td>
+                                    <td class="s11 separa">PORCENABSTENCION11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Votos nulos</th>
+                                    <td class="s15">TOTALNULOS15</td>
+                                    <td class="s15">PORCENNULOS15</td>
+                                    <td class="s11 separa">PORCENNULOS11</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Votos en blanco</th>
+                                    <td class="s15">TOTALBLANCOS15</td>
+                                    <td class="s15">PORCENBLANCOS15</td>
+                                    <td class="s11 separa">PORCENBLANCOS11</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- FIN CAJADATOSUNO -->
+
+                </div>
+                <!-- FIN SECCIÓN 3 -->
+
+                <!-- SECCIÓN 1 -->
+                <div id="seccion1">
+
+                    <!-- DIVGRAF -->
+                    <div id="divgraf">
+
+                                <!-- DIPUTADOS A ELEGIR -->
+                                <div id='dipaelegir' class="diput">Concejales a elegir: <span class="numelegir b">21</span></div>
+                                <!-- FIN DIPUTADOS A ELEGIR -->
+                        <!-- GRÁFICO DE HEMICICLOS -->
+                        <div id="grafact">
+                            <div id="aelegirygrafact">
+                                <div id="hemiciclojsact"></div>
+                            </div>
+                        </div>
+                        <div id="grafant">
+                            <div id="aelegirygrafant">
+                                <div id="hemiciclojsant"></div>
+                            </div>
+                        </div>
+                        <!-- FIN GRÁFICO DE HEMICICLOS -->
+                    </div>
+                    <!-- FIN DIVGRAF -->
+
+                </div>
+                <!-- FIN SECCIÓN 1 -->
+
+                <!-- CAJADATOSDOS -->
+                <div id="cajadatosdos">
+
+                   <!-- TABLA DE VOTOS -->
+                    <table id="TVOTOS" summary="Tabla de votos y porcentaje obtenidos por cada candidatura">
+                        <col width="1%" class="colorgr" />
+                        <col width="17%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="12%" />
+                        <col width="12%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="17%" />
+                        <col width="1%" class="colorgr" />
+                        <thead>
+                            <tr class="th1">
+                                <th colspan="5" class="th15 s15" scope="col" abbr="2015">2015</th>
+                                <th colspan="5" class="th11 s11 separa" scope="col" abbr="2012">2011</th>
+                            </tr>
+                            <tr class="th2">
+                                <th scope="col" class="s15 colorgr"></th>
+                                <th scope="col" class="s15 siglas15">Candidaturas</th>
+                                <th scope="col" class="s15" colspan="2">Votos</th>
+                                <th scope="col" class="s15 abbr" title="Concejales"><span>Concejales</span></th>
+                                <th scope="col" class="s11 separa abbr" title="Concejales"><span>Concejales</span></th>
+                                <th scope="col" class="s11" colspan="2">Votos</th>
+                                <th scope="col" class="s11 siglas11">Candidaturas</th>
+                                <th scope="col" class="s11 colorgr"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO1_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO1_class_siglas15_titmov15_title_DENOMINACION">PARTIDO1_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO1_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO1_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO1_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO1_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO1_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO1_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO1_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO1_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO1_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO2_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO2_class_siglas15_titmov15_title_DENOMINACION">PARTIDO2_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO2_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO2_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO2_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO2_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO2_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO2_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO2_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO2_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO2_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>							
+							<tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO3_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO3_class_siglas15_titmov15_title_DENOMINACION">PARTIDO3_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO3_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO3_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO3_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO3_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO3_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO3_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO3_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO3_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO3_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO4_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO4_class_siglas15_titmov15_title_DENOMINACION">PARTIDO4_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO4_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO4_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO4_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO4_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO4_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO4_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO4_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO4_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO4_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO5_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO5_class_siglas15_titmov15_title_DENOMINACION">PARTIDO5_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO5_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO5_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO5_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO5_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO5_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO5_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO5_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO5_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO5_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO6_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO6_class_siglas15_titmov15_title_DENOMINACION">PARTIDO6_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO6_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO6_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO6_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO6_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO6_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO6_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO6_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO6_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO6_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>							
+							<tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO7_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO7_class_siglas15_titmov15_title_DENOMINACION">PARTIDO7_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO7_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO7_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO7_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO7_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO7_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO7_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO7_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO7_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO7_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO8_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO8_class_siglas15_titmov15_title_DENOMINACION">PARTIDO8_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO8_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO8_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO8_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO8_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO8_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO8_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO8_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO8_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO8_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>							
+							<tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO9_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO9_class_siglas15_titmov15_title_DENOMINACION">PARTIDO9_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO9_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO9_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO9_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO9_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO9_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO9_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO9_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO9_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO9_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+							<tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO10_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO10_class_siglas15_titmov15_title_DENOMINACION">PARTIDO10_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO10_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO10_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO10_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO10_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO10_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO10_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO10_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO10_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO10_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>							
+							<tr class="r1">
+                                <td class="colorgr">                                    <div class="PARTIDO11_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO11_class_siglas15_titmov15_title_DENOMINACION">PARTIDO11_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO11_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO11_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO11_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO11_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO11_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO11_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO11_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO11_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO11_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                            <tr class="r2">
+                                <td class="colorgr">                                    <div class="PARTIDO12_class_colorgr_DIV"></div>
+                                </td>
+                                <th scope="row" class="siglas15 titmov15" id="XCE2002500231" title="PARTIDO12_class_siglas15_titmov15_title_DENOMINACION">PARTIDO12_class_siglas15_titmov15_valor_SIGLAS</th>
+                                <td class="vots s15" title="Votos">PARTIDO12_class_vots_s15_valor_VOTOS</td>
+                                <td class="porc porcentaje1 s15 " title="Porcentaje">PARTIDO12_class_porc_porcentaje1_s15_valor_PORCENTAJE</td>
+                                <td class="dip s15 " title="Concejales">PARTIDO12_class_dip_s15_valor_CONCEJALES</td>
+                                <td class="dip s11 separa" title="Concejales">PARTIDO12_class_dip_s11_separa_valor_CONCEJALES</td>
+                                <td class="vots s11" title="Votos">PARTIDO12_class_vots_s11_valor_VOTOS</td>
+                                <td class="porc porcentaje2 s11" title="Porcentaje">PARTIDO12_class_porc_porcentaje2_s11_valor_PORCENTAJE</td>
+                                <th scope="row" class="siglas11 s11 titmov11" title="PARTIDO12_class_siglas11_s11_titmov11_title_DENOMINACION">PARTIDO12_class_siglas11_s11_titmov11_valor_SIGLAS</th>
+                                <td class="colorgr s11">                                 <div class="PARTIDO12_class_colorgr_s11_DIV"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- FIN TABLA DE VOTOS -->
+
+                </div>
+                <!-- FIN CAJADATOSDOS -->
+
+            </div>
+            <!-- FIN DATOS DETALLADOS -->
+
+        </div>
+        <!-- FIN CONTENIDO -->
+
+        <div id="pie">
+            <div class="leyenda">
+                <p>Ayuntamiento de Tudela</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>
